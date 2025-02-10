@@ -4,7 +4,7 @@ for github
 
 ------------------------------------------
 sudo apt update && sudo apt upgrade -y
---------------------------------------------------
+-------------------------------------------------------
 sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu -y
 ------------------------------------------------
 cd $HOME
@@ -83,7 +83,7 @@ max_num_inbound_peers=40
 max_num_outbound_peers=10 
 max_connections=50
 
-----------------------------------------------------------------
+------------------------------------------------------------
 sed -i -e "s/^use-legacy *=.*/use-legacy = false/;\
 s/^max-num-inbound-peers *=.*/max-num-inbound-peers = $max_num_inbound_peers/;\
 s/^max-num-outbound-peers *=.*/max-num-outbound-peers = $max_num_outbound_peers/;\
@@ -106,7 +106,7 @@ sed -i 's/snapshot-interval *=.*/snapshot-interval = 0/' $HOME/.celestia-app/con
 ---------------------------------------------------
 celestia-appd tendermint unsafe-reset-all --home $HOME/.celestia-app
 
----------------------------------------------------
+-------------------------------------------------
 
 celestia-appd config chain-id $CELESTIA_CHAIN
 celestia-appd config keyring-backend test
